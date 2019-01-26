@@ -6,17 +6,13 @@
     <div>
     <h1><a href="#">New Zealand Blog</a></h1>
     </div>
-
+{% for post in posts %}
     <div>
-      <p>published 25.01.2019, 20:20</p>
-      <h2><a href="#">My first post</a></h2>
-      <p>Lelum polelum. Tu bedzie tekst pierwszego posta</p>
+      <p>published: {{ post.published_date }}</p>
+      <h1><a href="#">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
     </div>
+{% endfor %}
 
-    <div>
-      <p>published 25.01.2019, 20:50</p>
-      <h2><a href="#">My second post</a></h2>
-      <p>Lelum polelum. Tutaj bedzie tresc drugiego posta</p>
-    </div>
   </body>
 </html>
